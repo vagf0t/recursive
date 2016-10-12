@@ -1,0 +1,5 @@
+To run the ArrayFlattener start a rails console and:
+
+$ af = Recursive::ArrayFlattener.new
+$ af.flatten [1,[2,3],4, 5,[6]]
+ => [1, 4, 5, 2, 3, 6]
