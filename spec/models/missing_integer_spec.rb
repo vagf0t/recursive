@@ -30,4 +30,11 @@ describe Recursive::MissingInteger do
       expect(subject.solution([1])).to eq 2
     end
   end
+
+  context 'given an array of 100000 integers including maximum and minimum values' do
+    it 'should return the proper one' do
+      a = Array.new(100000) { rand(-1000000...1000000) }
+      expect(subject.solution(a) > 0).to be true
+    end
+  end
 end
